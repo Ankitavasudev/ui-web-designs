@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>UI Web Designs — Portfolio</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,300;0,9..144,700;1,9..144,400&family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+<style>
+  * { box-sizing: border-box; margin: 0; padding: 0; }
+  body { background: #0a0a0a; color: #fff; font-family: 'Inter', sans-serif; }
+  header { padding: 30px 60px; display: flex; justify-content: space-between; align-items: center; border-bottom: 1px solid #1a1a1a; }
+  .logo { font-family: 'Fraunces', serif; font-size: 1.6rem; font-weight: 700; letter-spacing: -1px; }
+  .logo span { color: #d4af37; }
+  nav a { color: #888; text-decoration: none; margin-left: 30px; font-size: .85rem; letter-spacing: 1px; text-transform: uppercase; transition: color .2s; }
+  nav a:hover { color: #fff; }
+  .hero { padding: 120px 60px; text-align: center; max-width: 900px; margin: 0 auto; }
+  .hero h1 { font-family: 'Fraunces', serif; font-size: 4.5rem; font-weight: 700; line-height: .95; letter-spacing: -2px; margin-bottom: 24px; }
+  .hero h1 em { font-style: italic; font-weight: 400; color: #d4af37; }
+  .hero p { font-size: 1.1rem; color: #888; line-height: 1.6; max-width: 600px; margin: 0 auto 40px; }
+  .btn { display: inline-block; padding: 14px 32px; background: #fff; color: #0a0a0a; text-decoration: none; font-weight: 600; font-size: .85rem; letter-spacing: 2px; text-transform: uppercase; transition: all .2s; }
+  .btn:hover { background: #d4af37; }
+  .btn-outline { background: transparent; color: #fff; border: 1px solid #333; margin-left: 12px; }
+  .btn-outline:hover { border-color: #fff; background: #fff; color: #0a0a0a; }
+  .grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(340px, 1fr)); gap: 30px; max-width: 1200px; margin: 80px auto; padding: 0 60px; }
+  .card { background: #111; padding: 40px; border: 1px solid #1a1a1a; transition: all .3s; text-decoration: none; color: inherit; display: block; }
+  .card:hover { border-color: #d4af37; transform: translateY(-4px); }
+  .card .num { font-family: 'Fraunces', serif; font-size: 3rem; color: #d4af37; font-weight: 700; margin-bottom: 16px; }
+  .card h3 { font-size: 1.3rem; font-weight: 600; margin-bottom: 10px; }
+  .card p { font-size: .85rem; color: #888; line-height: 1.6; }
+  .preview { width: 100%; height: 200px; background: #1a1a1a; margin-bottom: 24px; overflow: hidden; position: relative; }
+  .preview iframe { width: 1440px; height: 900px; border: 0; transform: scale(.236); transform-origin: top left; pointer-events: none; }
+  footer { text-align: center; padding: 40px; color: #444; font-size: .75rem; letter-spacing: 2px; text-transform: uppercase; border-top: 1px solid #1a1a1a; }
+</style>
+</head>
+<body>
+<header>
+  <div class="logo">UI <span>Designs</span></div>
+  <nav>
+    <a href="#designs">Designs</a>
+    <a href="#about">About</a>
+    <a href="https://github.com/Ankitavasudev">GitHub</a>
+  </nav>
+</header>
+
+<section class="hero">
+  <h1>Web UI <em>Designs</em><br>That Convert</h1>
+  <p>Professional, modern web interfaces built with clean code and strong design principles. Each design is production-ready and fully responsive.</p>
+  <a href="#designs" class="btn">View Designs</a>
+  <a href="https://github.com/Ankitavasudev" class="btn btn-outline">GitHub</a>
+</section>
+
+<section id="designs" class="grid">
+  <a class="card" href="saas-landing.html">
+    <div class="preview"><iframe src="saas-landing.html" loading="lazy"></iframe></div>
+    <div class="num">01</div>
+    <h3>SaaS Landing Page</h3>
+    <p>Modern SaaS product landing page with hero, features, pricing, and CTA. Dark theme with gold accents.</p>
+  </a>
+  <a class="card" href="dashboard.html">
+    <div class="preview"><iframe src="dashboard.html" loading="lazy"></iframe></div>
+    <div class="num">02</div>
+    <h3>Analytics Dashboard</h3>
+    <p>Clean analytics dashboard with sidebar, charts, stats cards, and data tables. Light theme.</p>
+  </a>
+  <a class="card" href="portfolio-site.html">
+    <div class="preview"><iframe src="portfolio-site.html" loading="lazy"></iframe></div>
+    <div class="num">03</div>
+    <h3>Portfolio Website</h3>
+    <p>Minimal portfolio site for designers/developers. Editorial style with project showcase.</p>
+  </a>
+  <a class="card" href="product-page.html">
+    <div class="preview"><iframe src="product-page.html" loading="lazy"></iframe></div>
+    <div class="num">04</div>
+    <h3>Product Showcase</h3>
+    <p>E-commerce product page with image gallery, specs, reviews, and purchase CTA.</p>
+  </a>
+</section>
+
+<footer>© 2026 · Designed & Built by Ankita Salaria · UI Web Designs</footer>
+</body>
+</html>

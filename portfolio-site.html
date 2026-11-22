@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Portfolio Website — UI Design</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,300;0,9..144,700;1,9..144,400&family=Inter:wght@300;400;500;700&display=swap" rel="stylesheet">
+<style>
+  * { box-sizing: border-box; margin: 0; padding: 0; }
+  body { background: #faf7f2; color: #1a1a1a; font-family: 'Inter', sans-serif; }
+  .nav { padding: 32px 60px; display: flex; justify-content: space-between; align-items: center; }
+  .nav .logo { font-family: 'Fraunces', serif; font-size: 1.4rem; font-weight: 700; letter-spacing: -1px; }
+  .nav .links a { color: #666; text-decoration: none; margin-left: 32px; font-size: .85rem; letter-spacing: 1px; text-transform: uppercase; transition: color .2s; }
+  .nav .links a:hover { color: #1a1a1a; }
+  .hero { padding: 80px 60px 60px; max-width: 1200px; margin: 0 auto; display: grid; grid-template-columns: 1fr 1fr; gap: 60px; align-items: center; }
+  .hero h1 { font-family: 'Fraunces', serif; font-size: 4rem; font-weight: 700; line-height: .95; letter-spacing: -2px; margin-bottom: 24px; }
+  .hero h1 em { font-style: italic; font-weight: 400; color: #8a6a3a; }
+  .hero p { font-size: 1rem; color: #666; line-height: 1.7; margin-bottom: 32px; }
+  .hero .btn { display: inline-block; padding: 12px 28px; background: #1a1a1a; color: #faf7f2; text-decoration: none; font-size: .8rem; letter-spacing: 2px; text-transform: uppercase; transition: all .2s; }
+  .hero .btn:hover { background: #8a6a3a; }
+  .hero-img { width: 100%; aspect-ratio: 4/5; background: linear-gradient(135deg, #d4af37 0%, #8a6a3a 100%); position: relative; overflow: hidden; }
+  .hero-img .inner { position: absolute; inset: 20px; background: #1a1a1a; display: flex; align-items: center; justify-content: center; color: #fff; font-family: 'Fraunces', serif; font-size: 2rem; font-style: italic; }
+  .projects { padding: 60px; max-width: 1200px; margin: 0 auto; }
+  .projects h2 { font-family: 'Fraunces', serif; font-size: 2rem; font-weight: 700; margin-bottom: 40px; }
+  .project-grid { display: grid; grid-template-columns: repeat(2, 1fr); gap: 30px; }
+  .project { background: #fff; padding: 0; overflow: hidden; box-shadow: 0 10px 40px rgba(0,0,0,.05); transition: transform .3s; }
+  .project:hover { transform: translateY(-4px); }
+  .project .img { width: 100%; height: 240px; background: #e8e4dc; }
+  .project .info { padding: 24px; }
+  .project .info h3 { font-size: 1.2rem; font-weight: 600; margin-bottom: 6px; }
+  .project .info p { font-size: .85rem; color: #888; line-height: 1.5; }
+  .project .info .tags { margin-top: 12px; display: flex; gap: 8px; flex-wrap: wrap; }
+  .project .info .tag { font-size: .65rem; letter-spacing: 2px; text-transform: uppercase; color: #8a6a3a; border: 1px solid #d4af37; padding: 4px 8px; }
+  .about { padding: 60px; max-width: 800px; margin: 0 auto; text-align: center; }
+  .about h2 { font-family: 'Fraunces', serif; font-size: 2rem; font-weight: 700; margin-bottom: 24px; }
+  .about p { font-size: 1rem; color: #666; line-height: 1.8; margin-bottom: 32px; }
+  .about .stats { display: flex; justify-content: center; gap: 60px; }
+  .about .stat .num { font-family: 'Fraunces', serif; font-size: 2.5rem; font-weight: 700; color: #8a6a3a; }
+  .about .stat .label { font-size: .7rem; letter-spacing: 2px; text-transform: uppercase; color: #888; }
+  .contact { padding: 60px; text-align: center; background: #1a1a1a; color: #fff; }
+  .contact h2 { font-family: 'Fraunces', serif; font-size: 2rem; font-weight: 700; margin-bottom: 16px; }
+  .contact p { color: #888; margin-bottom: 24px; }
+  .contact .btn { background: #d4af37; color: #1a1a1a; }
+  .contact .btn:hover { background: #fff; }
+  footer { padding: 30px 60px; text-align: center; font-size: .7rem; color: #aaa; letter-spacing: 2px; text-transform: uppercase; border-top: 1px solid #e8e4dc; }
+</style>
+</head>
+<body>
+<nav class="nav">
+  <div class="logo">Ankita Salaria</div>
+  <div class="links">
+    <a href="#work">Work</a>
+    <a href="#about">About</a>
+    <a href="#contact">Contact</a>
+  </div>
+</nav>
+
+<section class="hero">
+  <div>
+    <h1>Designer &<br><em>Developer</em></h1>
+    <p>I craft digital experiences that blend aesthetics with functionality. Specializing in clean, minimal design for web and mobile.</p>
+    <a href="#work" class="btn">View Work</a>
+  </div>
+  <div class="hero-img">
+    <div class="inner">Portrait</div>
+  </div>
+</section>
+
+<section id="work" class="projects">
+  <h2>Selected Work</h2>
+  <div class="project-grid">
+    <div class="project">
+      <div class="img" style="background: linear-gradient(135deg, #6366f1, #8b5cf6);"></div>
+      <div class="info"><h3>Cloud Dashboard</h3><p>Analytics platform for cloud infrastructure monitoring.</p><div class="tags"><span class="tag">UI/UX</span><span class="tag">React</span></div></div>
+    </div>
+    <div class="project">
+      <div class="img" style="background: linear-gradient(135deg, #f59e0b, #ef4444);"></div>
+      <div class="info"><h3>Mobile Banking App</h3><p>Redesign of a mobile banking experience.</p><div class="tags"><span class="tag">Mobile</span><span class="tag">Figma</span></div></div>
+    </div>
+    <div class="project">
+      <div class="img" style="background: linear-gradient(135deg, #10b981, #06b6d4);"></div>
+      <div class="info"><h3>E-commerce Platform</h3><p>Full-stack e-commerce with custom checkout flow.</p><div class="tags"><span class="tag">Web</span><span class="tag">Next.js</span></div></div>
+    </div>
+    <div class="project">
+      <div class="img" style="background: linear-gradient(135deg, #ec4899, #8b5cf6);"></div>
+      <div class="info"><h3>Design System</h3><p>Component library and design tokens for a SaaS product.</p><div class="tags"><span class="tag">Design System</span><span class="tag">Storybook</span></div></div>
+    </div>
+  </div>
+</section>
+
+<section id="about" class="about">
+  <h2>About Me</h2>
+  <p>I'm a designer and developer based in India, passionate about creating beautiful, functional digital experiences. With 5+ years of experience, I've worked with startups and enterprises alike.</p>
+  <div class="stats">
+    <div class="stat"><div class="num">50+</div><div class="label">Projects</div></div>
+    <div class="stat"><div class="num">30+</div><div class="label">Clients</div></div>
+    <div class="stat"><div class="num">5+</div><div class="label">Years</div></div>
+  </div>
+</section>
+
+<section id="contact" class="contact">
+  <h2>Let's Work Together</h2>
+  <p>Have a project in mind? I'd love to hear about it.</p>
+  <a href="mailto:hello@example.com" class="btn">Get in Touch</a>
+</section>
+
+<footer>© 2026 Ankita Salaria · Portfolio</footer>
+</body>
+</html>
